@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block title %}AboutPage{% endblock %}
+
+{% block content %}
+
+    <div class="row no-gutters">
+        <div class="col-md-9 order-md-2">
+            <div class="about-page-block">
+                <p class="lead">About Me.</p>
+                <hr>
+                {{ lipsum() }}
+                <hr>
+                <a class="btn btn-sm btn-outline-secondary" href="{{ url_for('contact') }}">Contact me.</a>
+            </div>
+        </div>
+
+        <div class="col-md-3 order-md-1">
+            {% include 'about_me_snippet.html' %}
+        </div>
+    </div>
+
+{% endblock %}

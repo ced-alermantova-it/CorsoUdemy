@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block title %}Errore 401{% endblock %}
+
+{% block content %}
+
+    <div class="row no-gutters">
+        <div class="col-md-9 order-md-2">
+            <div class="about-page-block">
+                <p class="lead">Errore 401.</p>
+                <hr>
+                <p>Acceso negato</p>
+                <p>Non sei autorizzato</p>
+                <hr>
+                <a class="btn btn-sm btn-outline-secondary" href="{{ url_for('homepage') }}">Homepage</a>
+            </div>
+        </div>
+
+        <div class="col-md-3 order-md-1">
+            {% include 'about_me_snippet.html' %}
+        </div>
+    </div>
+
+{% endblock %}
